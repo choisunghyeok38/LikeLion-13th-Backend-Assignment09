@@ -1,0 +1,26 @@
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/likelionhw
+    username: root
+    password: nemo0308
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type.descriptor.sql: trace
+
+# kosis url, key 추가
+kosis:
+  api:
+    base-url: https://kosis.kr/openapi/Param/statisticsParameterData.do
+    key: MGNhY2UyNDcwZjkzZTc0MjNiZmYwMzJiOWYxMTlhODU=
